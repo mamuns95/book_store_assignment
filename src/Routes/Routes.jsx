@@ -18,14 +18,14 @@ const routes = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         loader: () =>
-          fetch(`http://localhost:5000/news`),
+          fetch(`https://book-store-frontend-6eys7xyvp-al-mamuns-projects-b47f18c0.vercel.app/news`),
       },
       {
         path: "/category/:id",
         element: <CategoryBasedNews></CategoryBasedNews>,
         loader: ({ params }) =>
           fetch(
-            `http://localhost:5000/category/${params.id}`
+            `https://book-store-frontend-6eys7xyvp-al-mamuns-projects-b47f18c0.vercel.app/category/${params.id}`
           ),
       },
       {
@@ -37,7 +37,7 @@ const routes = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `http://localhost:5000/news/${params.id}`
+            `https://book-store-frontend-6eys7xyvp-al-mamuns-projects-b47f18c0.vercel.app/news/${params.id}`
           ),
       },
       {
